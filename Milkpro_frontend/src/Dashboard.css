@@ -1,0 +1,328 @@
+/* .dashboard {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .dashboard__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .dashboard__item {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard__item-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type='number'],
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .sales-table th,
+  .sales-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    
+  }
+  
+  .sales-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  .sales-table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+
+  .total-row {
+    background-color: #fcebeb;
+    font-weight: bold;
+  }                     
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+   */
+
+   /* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a consistent font family and background color for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Define a container to center the content and set a maximum width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+}
+
+/* Style for the main dashboard area */
+.dashboard {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  padding: 20px;
+}
+
+/* Style for the dashboard title */
+.dashboard__title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Flex layout for the dashboard content items */
+.dashboard__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Style for each individual content item */
+.dashboard__item {
+  flex: 1;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+}
+
+/* Hover effect for the content items */
+.dashboard__item:hover {
+  transform: translateY(-5px); /* Lift the item slightly on hover */
+}
+
+/* Style for content item titles */
+.dashboard__item-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style for form groups (input fields and labels) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style for input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7; /* Light gray background */
+  transition: border-color 0.3s ease-in-out; /* Smooth border transition on focus */
+}
+
+/* Input field focus effect */
+.input-field:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Style for select dropdowns */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7; /* Light gray background */
+}
+
+/* Style for buttons */
+button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue button background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for the sales table */
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style for table headers and cells */
+.sales-table th,
+.sales-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Style for table headers */
+.sales-table th {
+  background-color: #f1f1f1; /* Light gray background */
+  font-weight: bold;
+}
+
+/* Alternate row color in the sales table */
+.sales-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7; /* Light gray background */
+}
+
+/* Style for total row in the sales table */
+.total-row {
+  background-color: #fcebeb; /* Light red background */
+  font-weight: bold;
+}
+/* Style for the reset button container */
+.reset-button-container {
+  text-align: right; /* Align the reset button to the right */
+  margin-top: 10px;
+}
+
+/* Style for reset button */
+.reset-button {
+  padding: 6px 12px;
+  background-color: #dc3545; /* Red background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+}
+
+/* Reset button hover effect */
+.reset-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Style for delete button */
+.delete-button {
+  padding: 6px 12px;
+  background-color: #f44336; /* Red background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+}
+
+/* Delete button hover effect */
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Style for add sale button */
+.add-sale-button {
+  padding: 12px 20px;
+  background-color: #28a745; /* Green background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition on hover */
+}
+
+/* Add sale button hover effect */
+.add-sale-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Style for the total amounts section */
+.total-amounts {
+  text-align: right; /* Align the total amounts to the right */
+  margin-top: 20px;
+}
+
+/* Style for footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #282c34; /* Dark gray background */
+  color: #ffffff; /* White text color */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .dashboard__content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .dashboard__item {
+    margin-bottom: 20px;
+  }
+}
